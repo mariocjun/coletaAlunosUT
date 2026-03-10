@@ -104,14 +104,14 @@ def build_html():
 <body>
 
 <div class="container">
-    <h1>Vestibulares UTFPR - Aprovados</h1>
+    <h1>Vestibulares e Sisu UTFPR - Aprovados</h1>
 """
 
     for ed in editions:
         html += f"""
     <div class="edition-card">
         <div class="edition-header">
-            <h2>Vestibular {ed['name']}</h2>
+            <h2>{ed['name'] if 'Sisu' in ed['name'] else 'Vestibular ' + ed['name']}</h2>
             <a href="{ed['url']}" target="_blank" class="edition-link">Ver Resultados Oficiais</a>
         </div>
         """
