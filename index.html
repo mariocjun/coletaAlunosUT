@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Aprovados - Vestibulares UTFPR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #ffcc00; /* UTFPR yellow-ish */
+            background-color: #333; /* Dark background to contrast */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .edition-card {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .edition-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .edition-header h2 {
+            margin: 0;
+            color: #0056b3;
+        }
+        .edition-link {
+            text-decoration: none;
+            color: #fff;
+            background-color: #0056b3;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .edition-link:hover {
+            background-color: #004494;
+        }
+        .approved-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .approved-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            border-left: 4px solid #ddd;
+            transition: border-color 0.3s;
+        }
+        .approved-item.checked {
+            border-left-color: #28a745;
+            background-color: #eafbee;
+        }
+        .approved-item input[type="checkbox"] {
+            margin-right: 15px;
+            transform: scale(1.5);
+            cursor: pointer;
+        }
+        .approved-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            flex-grow: 1;
+        }
+        .approved-item a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .no-links {
+            color: #888;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Vestibulares UTFPR - Aprovados</h1>
+
+    <div class="edition-card">
+        <div class="edition-header">
+            <h2>Vestibular 2026/1</h2>
+            <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados" target="_blank" class="edition-link">Ver Resultados Oficiais</a>
+        </div>
+        <ul class="approved-list">
+            <li class="approved-item" id="item-chk-2026-1-0">
+                <input type="checkbox" id="chk-2026-1-0" class="approved-checkbox" data-item-id="item-chk-2026-1-0">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/apucarana" target="_blank">Apucarana</a>
+            </li>
+            <li class="approved-item" id="item-chk-2026-1-1">
+                <input type="checkbox" id="chk-2026-1-1" class="approved-checkbox" data-item-id="item-chk-2026-1-1">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/campo-mourao" target="_blank">Campo Mourão</a>
+            </li>
+            <li class="approved-item" id="item-chk-2026-1-2">
+                <input type="checkbox" id="chk-2026-1-2" class="approved-checkbox" data-item-id="item-chk-2026-1-2">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/cornelio-procopio" target="_blank">Cornélio Procópio</a>
+            </li>
+            <li class="approved-item" id="item-chk-2026-1-3">
+                <input type="checkbox" id="chk-2026-1-3" class="approved-checkbox" data-item-id="item-chk-2026-1-3">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/curitiba" target="_blank">Curitiba</a>
+            </li>
+            <li class="approved-item" id="item-chk-2026-1-4">
+                <input type="checkbox" id="chk-2026-1-4" class="approved-checkbox" data-item-id="item-chk-2026-1-4">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/dois-vizinhos" target="_blank">Dois Vizinhos</a>
+            </li>
+            <li class="approved-item" id="item-chk-2026-1-5">
+                <input type="checkbox" id="chk-2026-1-5" class="approved-checkbox" data-item-id="item-chk-2026-1-5">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/francisco-beltrao" target="_blank">Francisco Beltrão</a>
+            </li>
+            <li class="approved-item" id="item-chk-2026-1-6">
+                <input type="checkbox" id="chk-2026-1-6" class="approved-checkbox" data-item-id="item-chk-2026-1-6">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/guarapuava" target="_blank">Guarapuava</a>
+            </li>
+            <li class="approved-item" id="item-chk-2026-1-7">
+                <input type="checkbox" id="chk-2026-1-7" class="approved-checkbox" data-item-id="item-chk-2026-1-7">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/londrina" target="_blank">Londrina</a>
+            </li>
+            <li class="approved-item" id="item-chk-2026-1-8">
+                <input type="checkbox" id="chk-2026-1-8" class="approved-checkbox" data-item-id="item-chk-2026-1-8">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/medianeira" target="_blank">Medianeira</a>
+            </li>
+            <li class="approved-item" id="item-chk-2026-1-9">
+                <input type="checkbox" id="chk-2026-1-9" class="approved-checkbox" data-item-id="item-chk-2026-1-9">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/pato-branco" target="_blank">Pato Branco</a>
+            </li>
+            <li class="approved-item" id="item-chk-2026-1-10">
+                <input type="checkbox" id="chk-2026-1-10" class="approved-checkbox" data-item-id="item-chk-2026-1-10">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/ponta-grossa" target="_blank">Ponta Grossa</a>
+            </li>
+            <li class="approved-item" id="item-chk-2026-1-11">
+                <input type="checkbox" id="chk-2026-1-11" class="approved-checkbox" data-item-id="item-chk-2026-1-11">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/santa-helena" target="_blank">Santa Helena</a>
+            </li>
+            <li class="approved-item" id="item-chk-2026-1-12">
+                <input type="checkbox" id="chk-2026-1-12" class="approved-checkbox" data-item-id="item-chk-2026-1-12">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes/2026-1/resultados/chamadas/toledo" target="_blank">Toledo</a>
+            </li></ul>
+    </div>
+    <div class="edition-card">
+        <div class="edition-header">
+            <h2>Vestibular 2025/1</h2>
+            <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados" target="_blank" class="edition-link">Ver Resultados Oficiais</a>
+        </div>
+        <ul class="approved-list">
+            <li class="approved-item" id="item-chk-2025-1-0">
+                <input type="checkbox" id="chk-2025-1-0" class="approved-checkbox" data-item-id="item-chk-2025-1-0">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/apucarana" target="_blank">Apucarana</a>
+            </li>
+            <li class="approved-item" id="item-chk-2025-1-1">
+                <input type="checkbox" id="chk-2025-1-1" class="approved-checkbox" data-item-id="item-chk-2025-1-1">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/campo-mourao" target="_blank">Campo Mourão</a>
+            </li>
+            <li class="approved-item" id="item-chk-2025-1-2">
+                <input type="checkbox" id="chk-2025-1-2" class="approved-checkbox" data-item-id="item-chk-2025-1-2">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/cornelio-procopio" target="_blank">Cornélio Procópio</a>
+            </li>
+            <li class="approved-item" id="item-chk-2025-1-3">
+                <input type="checkbox" id="chk-2025-1-3" class="approved-checkbox" data-item-id="item-chk-2025-1-3">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/curitiba" target="_blank">Curitiba</a>
+            </li>
+            <li class="approved-item" id="item-chk-2025-1-4">
+                <input type="checkbox" id="chk-2025-1-4" class="approved-checkbox" data-item-id="item-chk-2025-1-4">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/dois-vizinhos-vestibular-2025" target="_blank">Dois Vizinhos</a>
+            </li>
+            <li class="approved-item" id="item-chk-2025-1-5">
+                <input type="checkbox" id="chk-2025-1-5" class="approved-checkbox" data-item-id="item-chk-2025-1-5">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/francisco-beltrao" target="_blank">Francisco Beltrão</a>
+            </li>
+            <li class="approved-item" id="item-chk-2025-1-6">
+                <input type="checkbox" id="chk-2025-1-6" class="approved-checkbox" data-item-id="item-chk-2025-1-6">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/guarapuava" target="_blank">Guarapuava</a>
+            </li>
+            <li class="approved-item" id="item-chk-2025-1-7">
+                <input type="checkbox" id="chk-2025-1-7" class="approved-checkbox" data-item-id="item-chk-2025-1-7">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/londrina" target="_blank">Londrina</a>
+            </li>
+            <li class="approved-item" id="item-chk-2025-1-8">
+                <input type="checkbox" id="chk-2025-1-8" class="approved-checkbox" data-item-id="item-chk-2025-1-8">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/medianeira" target="_blank">Medianeira</a>
+            </li>
+            <li class="approved-item" id="item-chk-2025-1-9">
+                <input type="checkbox" id="chk-2025-1-9" class="approved-checkbox" data-item-id="item-chk-2025-1-9">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/pato-branco" target="_blank">Pato Branco</a>
+            </li>
+            <li class="approved-item" id="item-chk-2025-1-10">
+                <input type="checkbox" id="chk-2025-1-10" class="approved-checkbox" data-item-id="item-chk-2025-1-10">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/ponta-grossa" target="_blank">Ponta Grossa</a>
+            </li>
+            <li class="approved-item" id="item-chk-2025-1-11">
+                <input type="checkbox" id="chk-2025-1-11" class="approved-checkbox" data-item-id="item-chk-2025-1-11">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/santa-helena" target="_blank">Santa Helena</a>
+            </li>
+            <li class="approved-item" id="item-chk-2025-1-12">
+                <input type="checkbox" id="chk-2025-1-12" class="approved-checkbox" data-item-id="item-chk-2025-1-12">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2025-1/resultados/toledo" target="_blank">Toledo</a>
+            </li></ul>
+    </div>
+    <div class="edition-card">
+        <div class="edition-header">
+            <h2>Vestibular 2024/2</h2>
+            <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2024-2/resultados" target="_blank" class="edition-link">Ver Resultados Oficiais</a>
+        </div>
+        <ul class="approved-list">
+            <li class="approved-item" id="item-chk-2024-2-0">
+                <input type="checkbox" id="chk-2024-2-0" class="approved-checkbox" data-item-id="item-chk-2024-2-0">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2024-2/resultados/aprovados-vestibular-2024-2.pdf/@@display-file/file" target="_blank">Relação Nominal dos Aprovados</a>
+            </li></ul>
+    </div>
+    <div class="edition-card">
+        <div class="edition-header">
+            <h2>Vestibular 2024/1</h2>
+            <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2024-1/resultados" target="_blank" class="edition-link">Ver Resultados Oficiais</a>
+        </div>
+        <ul class="approved-list">
+            <li class="approved-item" id="item-chk-2024-1-0">
+                <input type="checkbox" id="chk-2024-1-0" class="approved-checkbox" data-item-id="item-chk-2024-1-0">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2024-1/resultados/aprovados-vestibular-2024-1.pdf/@@display-file/file" target="_blank">Relação Nominal dos Aprovados</a>
+            </li></ul>
+    </div>
+    <div class="edition-card">
+        <div class="edition-header">
+            <h2>Vestibular 2023/2</h2>
+            <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2023-2/resultados" target="_blank" class="edition-link">Ver Resultados Oficiais</a>
+        </div>
+        <ul class="approved-list">
+            <li class="approved-item" id="item-chk-2023-2-0">
+                <input type="checkbox" id="chk-2023-2-0" class="approved-checkbox" data-item-id="item-chk-2023-2-0">
+                <a href="https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/edicoes-anteriores/2023-2/resultados/aprovados-vestibular-2023-2-1a-chamada.pdf/@@display-file/file" target="_blank">Relação Nominal dos Aprovados</a>
+            </li></ul>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const checkboxes = document.querySelectorAll('.approved-checkbox');
+
+        // Load saved state
+        checkboxes.forEach(checkbox => {
+            const isChecked = localStorage.getItem(checkbox.id) === 'true';
+            checkbox.checked = isChecked;
+            updateItemStyle(checkbox);
+
+            // Add change listener
+            checkbox.addEventListener('change', (e) => {
+                localStorage.setItem(checkbox.id, e.target.checked);
+                updateItemStyle(e.target);
+            });
+        });
+
+        function updateItemStyle(checkbox) {
+            const itemId = checkbox.getAttribute('data-item-id');
+            const itemElement = document.getElementById(itemId);
+            if (checkbox.checked) {
+                itemElement.classList.add('checked');
+            } else {
+                itemElement.classList.remove('checked');
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
